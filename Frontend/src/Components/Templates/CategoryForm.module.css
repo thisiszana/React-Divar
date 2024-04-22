@@ -1,0 +1,45 @@
+.foem h3 {
+    margin-bottom: 30px;
+    border-bottom: 3px solid #a62626;
+    width: fit-content;
+    padding-bottom: 5px;
+}
+
+.foem label {
+    display: block;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+.foem input {
+    display: block;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.foem button {
+    background-color: #a62626;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+.foem button:disabled {
+    cursor: no-drop;
+    opacity: .3;
+}
+
+.foem p {
+    background-color: #a62626;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+}

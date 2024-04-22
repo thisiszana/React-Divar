@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(234, 234, 234);
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 45px;
+  margin-left: 40px;
+}
+
+.location {
+  cursor: pointer;
+}
+
+.header div {
+  display: flex;
+}
+
+.header span {
+    display: flex;
+    align-items: center;
+    color: grey;
+    height: 50px;
+}
+
+.header span p {
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background-color: #a63626;
+  color: #fff;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 40px;
+}

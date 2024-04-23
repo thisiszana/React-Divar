@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { BrowserRouter } from "react-router-dom";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Layout>
           <Router />
+          <Toaster />
         </Layout>
       </BrowserRouter>
       <ReactQueryDevtools />

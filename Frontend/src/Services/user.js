@@ -1,6 +1,7 @@
 import api from "Configs/api";
 
-const getProfile = () =>
-  api.get("user/whoami").then(res => res || false);
+const getProfile = () => api.get("user/whoami").then((res) => res || false);
 
-export { getProfile };
+const getPosts = () => api.get("post/my");
+
+export { getProfile, getPosts };

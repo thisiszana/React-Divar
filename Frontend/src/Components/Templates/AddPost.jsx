@@ -44,7 +44,8 @@ function AddPost() {
 
     const token = getCookie("accessToken");
 
-    axios.post(`http://localhost:3400/post/create`, formData, {
+    axios
+      .post(`http://localhost:3400/post/create`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `bearer ${token}`,
@@ -67,6 +68,9 @@ function AddPost() {
       <input type="text" name="city" id="city" />
       <label htmlFor="category">دسته بندی</label>
       <select name="category" id="category">
+        <option value="" disabled>
+          دسته بندی را انتخاب کنید
+        </option>
         {data?.data.map((i) => (
           <option value={i._id} key={i._id}>
             {i.name}

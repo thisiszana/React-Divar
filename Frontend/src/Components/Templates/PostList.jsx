@@ -16,7 +16,8 @@ function PostList() {
     return <div>No posts available.</div>;
   }
 
-  console.log({ data, isLoading });
+  const baseURL = import.meta.env.VITE_BASE_URL;
+  
   return (
     <div className={styles.list}>
       {isLoading ? (
@@ -25,11 +26,8 @@ function PostList() {
         <>
           <h3>آگهی های شما</h3>
           {data.data.posts.map((post) => (
-              <div key={post._id} className={styles.post}>
-              <img
-                src={`${import.meta.env.VITE_BASE_URL}/${post.images[0]}`}
-                alt=""
-              />
+            <div key={post._id} className={styles.post}>
+              <img src={`${baseURL}${post.images[0]}`} />
               <div>
                 <p>{post.options.title}</p>
                 <span>{post.options.content}</span>

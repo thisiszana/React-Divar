@@ -1,9 +1,20 @@
+import styles from "./Sidebar.module.css";
 
-
-function Sidebar() {
+function Sidebar({category}) {
+  
   return (
-    <div>Sidebar</div>
-  )
+    <div className={styles.sidebar}>
+      <h4>دسته بندی ها</h4>
+      <ul>
+        {category?.data.map((category) => (
+          <li key={category._id}>
+            <img src={`${category.icon}.svg`} alt="" />
+            <p>{category.name}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
-export default Sidebar
+export default Sidebar;

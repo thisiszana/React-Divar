@@ -32,33 +32,30 @@ function AddPost() {
     }
   };
 
-  const addHandler =  (e) => {
-    e.preventDefault();
-    const formData = new FormData();
+  const baseURL = import.meta.env.VITE_BASE_URL;
 
+  const addHandler = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData();
     for (let i in form) {
       formData.append(i, form[i]);
     }
-    console.log(formData)
 
     const token = getCookie("accessToken");
 
-axios
-      .post("http://localhost:3400/post/create", formData, {
+    axios.post(`http://localhost:3400/post/create`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${token}`,
+          Authorization: `bearer ${token}`,
         },
       })
       .then((res) => toast.success(res.data.message))
-      .then((error) => toast.error("مشکلی پیش آمده است."));
+      .catch((error) => toast.error("مشکلی پیش آمده است"));
   };
 
   return (
-    <form
-      onChange={changeHandler}
-      className={styles.form}
-    >
+    <form onChange={changeHandler} className={styles.form}>
       <h3>افزودن آگهی</h3>
       <label htmlFor="title">عنوان</label>
       <input type="text" name="title" id="title" />

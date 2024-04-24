@@ -39,3 +39,13 @@
   width: 150px;
   text-align: center;
 }
+
+button {
+  width: 70px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #a62626;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -21,7 +21,6 @@ function CategoryList() {
     mutationFn: deleteCategory,
     onSuccess: () => queryClient.invalidateQueries("get-categories"),
   });
-  console.log(dataDelete);
 
   //   console.log(data);
 
